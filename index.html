@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de Cédula Dominicana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Validador de Cédula Dominicana</h1>
+        <p>Ingrese el número de cédula para verificar su validez según el algoritmo módulo 10.</p>
+        
+        <div class="input-group">
+            <input type="text" id="cedula" placeholder="Ej: 001-1234567-8" maxlength="11">
+            <button id="validar">Validar</button>
+        </div>
+        
+        <div id="resultado" class="hidden">
+            <p id="mensaje"></p>
+            <p id="detalle"></p>
+        </div>
+        
+        <div class="info">
+            <h3>¿Cómo funciona la validación?</h3>
+            <p>El algoritmo módulo 10 para cédulas dominicanas sigue estos pasos:</p>
+            <ol>
+                <li>Debe tener 11 dígitos en formato 000-0000000-0 o sin guiones</li>
+                <li>El dígito verificador (último dígito) se calcula con módulo 10</li>
+                <li>Se aplica el algoritmo de peso 1,2,1,2,1,2,1,2,1,2</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
